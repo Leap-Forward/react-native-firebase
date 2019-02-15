@@ -1,8 +1,8 @@
 <p align="center">
-  <a href="https://rnfirebase.io">
-    <img src="https://i.imgur.com/eBNJlHd.png"><br/>
+  <a href="https://invertase.io/oss/react-native-firebase">
+    <img width="180px" src="https://i.imgur.com/JIyBtKW.png"><br/>
   </a>
-  <h1 align="center">React Native Firebase</h2>
+  <h2 align="center">React Native Firebase</h2>
 </p>
 
 <p align="center">
@@ -17,7 +17,7 @@
 
 ## Introduction
 
-**React Native Firebase** is a _light-weight_ javascript layer connecting you to the native Firebase SDKs for both iOS and Android which aimes to mirror the offical Firebase Web SDK as closely as possible.
+**React Native Firebase** is a _light-weight_ javascript layer connecting you to the native Firebase SDKs for both iOS and Android which aims to mirror the official Firebase Web SDK as closely as possible.
 
 Although the official [Firebase JS SDK](https://www.npmjs.com/package/firebase) will work with React Native; it is mainly built for the web and has a limited feature-set compared to native.
 
@@ -31,27 +31,27 @@ Using the native Firebase SDKs with **React Native Firebase** allows you to cons
 
 > '**?**' indicates partial support
 
-| Firebase Features                                                                                                                 | v2.2.x | v3.3.x | v4.3.x | Web SDK |
-| --------------------------------------------------------------------------------------------------------------------------------- | :----: | :----: | :----: | :-----: |
-| **AdMob**                                                                                                                         |   ✅   |   ✅   |   ✅   |   ❌    |
-| **Analytics**                                                                                                                     |   ✅   |   ✅   |   ✅   |   ❌    |
-| **App Indexing**                                                                                                                  |   ❌   |   ❌   |   ❌   |   ❌    |
-| **Authentication**                                                                                                                |   ✅   |   ✅   |   ✅   |   ✅    |
-| _-- Phone Auth_                                                                                                                   |   ❌   |   ✅   |   ✅   |   ❌    |
-| **Core**                                                                                                                          | **?**  |   ✅   |   ✅   |   ✅    |
-| _-- Multiple Apps_                                                                                                                |   ❌   |   ✅   |   ✅   |   ✅    |
-| **Cloud Firestore**                                                                                                               |   ❌   |   ✅   |   ✅   |  **?**  |
-| **Cloud Messaging (FCM)**                                                                                                         | **?**  | **?**  |   ✅   |   ❌    |
-| **Crashlytics**                                                                                                                   |   ❌   |   ✅   |   ✅   |   ❌    |
-| **Dynamic Links**                                                                                                                 |   ❌   |   ✅   |   ✅   |   ❌    |
-| **[Functions Callable](https://firebase.googleblog.com/2018/04/launching-cloud-functions-for-firebase-1-0.html?m=1)**             |   ❌   |   ❌   |   ✅   |   ✅    |
-| **Invites**                                                                                                                       |   ❌   |   ❌   |   ✅   |   ❌    |
-| **Instance ID**                                                                                                                   |   ❌   |   ❌   | **?**  |   ❌    |
-| **Performance Monitoring**                                                                                                        |   ✅   |   ✅   |   ✅   |   ❌    |
-| **Realtime Database**                                                                                                             |   ✅   |   ✅   |   ✅   |   ✅    |
-| _-- Offline Persistence_                                                                                                          |   ✅   |   ✅   |   ✅   |  **?**  |
-| **Remote Config**                                                                                                                 |   ✅   |   ✅   |   ✅   |   ❌    |
-| **Storage**                                                                                                                       |   ✅   |   ✅   |   ✅   |  **?**  |
+| Firebase Features                                                                                                                 | v5.x.x | Web SDK |
+| --------------------------------------------------------------------------------------------------------------------------------- | :----: | :-----: |
+| **AdMob**                                                                                                                         |   ✅   |   ❌    |
+| **Analytics**                                                                                                                     |   ✅   |   ❌    |
+| **App Indexing**                                                                                                                  |   ❌   |   ❌    |
+| **Authentication**                                                                                                                |   ✅   |   ✅    |
+| _-- Phone Auth_                                                                                                                   |   ✅   |   ✅    |
+| **Core**                                                                                                                          |   ✅   |   ✅    |
+| _-- Multiple Apps_                                                                                                                |   ✅   |   ✅    |
+| **Cloud Firestore**                                                                                                               |   ✅   |   ✅    |
+| **Cloud Messaging (FCM)**                                                                                                         |   ✅   |   ❌    |
+| **Crashlytics**                                                                                                                   |   ✅   |   ❌    |
+| **Dynamic Links**                                                                                                                 |   ✅   |   ❌    |
+| **[Functions Callable](https://firebase.googleblog.com/2018/04/launching-cloud-functions-for-firebase-1-0.html?m=1)**             |   ✅   |   ✅    |
+| **Invites**                                                                                                                       |   ✅   |   ❌    |
+| **Instance ID**                                                                                                                   |   ✅   |   ❌    |
+| **Performance Monitoring**                                                                                                        |   ✅   |   ❌    |
+| **Realtime Database**                                                                                                             |   ✅   |   ✅    |
+| _-- Offline Persistence_                                                                                                          |   ✅   |  **?**  |
+| **Remote Config**                                                                                                                 |   ✅   |   ❌    |
+| **Storage**                                                                                                                       |   ✅   |   ✅    |
 
 ---
 
@@ -59,11 +59,12 @@ Using the native Firebase SDKs with **React Native Firebase** allows you to cons
 
 > The table below shows the supported versions of React Native and the Firebase SDKs for different versions of `react-native-firebase`.
 
-|                           |  3.3.x   |  4.3.x  | 5.0.x |
-| ------------------------- | :------: | :-----: | :---: |
-| React Native              | 0.50-52  | 0.52-55 | 0.56  |
-| Play Services Android SDK | 11.8.0 + | 15.0.1  | 15.0.1|
-| Firebase iOS SDK          | 4.7.0 +  |  5.3.0  | 5.6.0 |
+|                           |  3.3.x   |  4.3.x  |       5.x.x       |
+| ------------------------- | :------: | :-----: | :---------------: |
+| React Native              | 0.50-52  | 0.52-55 |   ^0.56 - ^0.58   |
+| Play Services Android SDK | 11.8.0 + | 15.0.1  |      ^16.0.1      |
+| Firebase iOS SDK          | 4.7.0 +  |  5.3.0  | ^5.10.0 - ^5.15.0 |
+
 
 ---
 

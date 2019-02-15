@@ -8,8 +8,11 @@ import Path from './Path';
 import { isObject, deepGet } from '../../utils';
 import { parseNativeMap } from './utils/serialize';
 
-import type Firestore from '.';
-import type { NativeDocumentSnapshot, SnapshotMetadata } from './types';
+import type Firestore from './';
+import type {
+  NativeDocumentSnapshot,
+  SnapshotMetadata,
+} from './firestoreTypes.flow';
 
 const extractFieldPathData = (data: Object | void, segments: string[]): any => {
   if (!data || !isObject(data)) {
@@ -45,7 +48,7 @@ export default class DocumentSnapshot {
     return this._data !== undefined;
   }
 
-  get id(): string | null {
+  get id(): string {
     return this._ref.id;
   }
 
